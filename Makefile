@@ -1,7 +1,10 @@
-all: 
+all: number-server http-server
   
-pwcrack: pwcrack.c
-    gcc -std=c11 -Wall -Wno-unused-variable -fsanitize=address -g pwcrack.c -o pwcrack
+number-server: number-server.c
+    gcc -std=c11 -Wall -Wno-unused-variable -fsanitize=address -g number-server.c -o number-server
+
+http-server: http-server.c
+    gcc -std=c11 -Wall -Wno-unused-variable -fsanitize=address -g http-server.c -o http-server
 
 clean:
-    rm -f pwcrack
+    rm -f http-server number-server
